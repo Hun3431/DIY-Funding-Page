@@ -34,27 +34,47 @@ export default function LoginBoxComponent({ ...props }: any) {
       </LoginTitleStyle>
       {props.page === "login" ? <LoginComponent /> : <JoinComponent />}
       <SocialLoginBoxStyle>
-        <button>
-          <SocialLoginIconStyle src="/Kakao.png" />
-        </button>
-        <button>
-          <SocialLoginIconStyle src="/Naver.png" />
-        </button>
-        <button>
-          <SocialLoginIconStyle src="/Google.png" />
-        </button>
+        <DividerStyle />
+        <SocialLoginTextStyle>다른 계정으로 로그인 하기</SocialLoginTextStyle>
+        <SocialLoginStyle>
+          <button>
+            <SocialLoginIconStyle src="/Kakao.png" />
+          </button>
+          <button>
+            <SocialLoginIconStyle src="/Naver.png" />
+          </button>
+          <button>
+            <SocialLoginIconStyle src="/Google.png" />
+          </button>
+        </SocialLoginStyle>
       </SocialLoginBoxStyle>
     </LoginBoxStyle>
   );
 }
 
-const SocialLoginIconStyle = styled.img`
-  margin: 0 25px;
+const DividerStyle = styled.div`
+  border-top: #dddddd solid 1px;
+`;
+
+const SocialLoginTextStyle = styled.div`
+  text-align: center;
+  font-size: 12px;
+  color: #54595e;
+  margin: 20px 0;
 `;
 
 const SocialLoginBoxStyle = styled.div`
   display: flex;
+  flex-direction: column;
+  padding: 0 50px 50px;
+`;
+
+const SocialLoginIconStyle = styled.img`
+  margin: 0 25px;
+`;
+
+const SocialLoginStyle = styled.div`
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 50px;
 `;

@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+const AgreementStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+`;
+
+const AgreementItemStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+`;
+
 const LoginFindBoxStyle = styled.div`
   display: flex;
   flex-direction: row;
@@ -35,6 +48,7 @@ const LoginInputBoxStyle = styled.div`
 const LoginButtonStyle = styled.input`
   width: 100%;
   height: 50px;
+  margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 6px;
   border: 1px solid #54595e;
@@ -69,4 +83,6 @@ export {
   LoginButtonStyle,
   LoginInputStyle,
   LoginContentsStyle,
+  AgreementStyle,
+  AgreementItemStyle,
 };
