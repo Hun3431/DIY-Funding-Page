@@ -1,5 +1,32 @@
 import styled from "styled-components";
 
+const DividerStyle = styled.div`
+  border-top: #dddddd solid 1px;
+`;
+
+const SocialLoginTextStyle = styled.div`
+  text-align: center;
+  font-size: 12px;
+  color: #54595e;
+  margin: 20px 0;
+`;
+
+const SocialLoginBoxStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px 50px;
+`;
+
+const SocialLoginIconStyle = styled.img`
+  margin: 0 25px;
+`;
+
+const SocialLoginStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
 const LoginTitleStyle = styled.div`
   display: flex;
   flex-direction: row;
@@ -31,4 +58,13 @@ const LoginBoxStyle = styled.div`
   justify-content: flex-start;
 `;
 
-export { LoginTitleStyle, LoginTitleButtonStyle, LoginBoxStyle };
+export {
+  DividerStyle,
+  SocialLoginTextStyle,
+  SocialLoginBoxStyle,
+  SocialLoginIconStyle,
+  SocialLoginStyle,
+  LoginTitleStyle,
+  LoginTitleButtonStyle,
+  LoginBoxStyle,
+};

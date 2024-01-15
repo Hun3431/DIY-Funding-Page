@@ -1,13 +1,13 @@
 "use client";
 
 import styled from "styled-components";
-import LoginBoxComponent from "../Components/LoginBoxComponent";
+import AuthComponent from "../../Components/AuthComponent";
 
 export default function Home() {
   return (
     <LoginMainStyled>
-      login!
-      <LoginBoxComponent page="login"></LoginBoxComponent>
+      join!
+      <AuthComponent page="join" />
     </LoginMainStyled>
   );
 }

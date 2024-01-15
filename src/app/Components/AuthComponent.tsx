@@ -1,21 +1,25 @@
 import { useRouter } from "next/navigation";
-import styled from "styled-components";
 import {
+  DividerStyle,
   LoginBoxStyle,
   LoginTitleButtonStyle,
   LoginTitleStyle,
-} from "../Style/LoginBoxStyle";
+  SocialLoginBoxStyle,
+  SocialLoginIconStyle,
+  SocialLoginStyle,
+  SocialLoginTextStyle,
+} from "../Style/AuthComponentStyle";
 import LoginComponent from "./LoginComponent";
 import JoinComponent from "./JoinComponent";
 
-export default function LoginBoxComponent({ ...props }: any) {
+export default function AuthComponent({ ...props }: any) {
   const router = useRouter();
   return (
     <LoginBoxStyle>
       <LoginTitleStyle>
         <LoginTitleButtonStyle
           onClick={() => {
-            router.push("/login");
+            router.push("/auth/login");
           }}
           fColor={props.page === "login" ? "#487056" : "#ffffff"}
           bgColor={props.page === "login" ? "#ffffff" : "#54595E"}
@@ -24,7 +28,7 @@ export default function LoginBoxComponent({ ...props }: any) {
         </LoginTitleButtonStyle>
         <LoginTitleButtonStyle
           onClick={() => {
-            router.push("/join");
+            router.push("/auth/join");
           }}
           fColor={props.page === "join" ? "#487056" : "#ffffff"}
           bgColor={props.page === "join" ? "#ffffff" : "#54595E"}
@@ -51,30 +55,3 @@ export default function LoginBoxComponent({ ...props }: any) {
     </LoginBoxStyle>
   );
 }
-
-const DividerStyle = styled.div`
-  border-top: #dddddd solid 1px;
-`;
-
-const SocialLoginTextStyle = styled.div`
-  text-align: center;
-  font-size: 12px;
-  color: #54595e;
-  margin: 20px 0;
-`;
-
-const SocialLoginBoxStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px 50px;
-`;
-
-const SocialLoginIconStyle = styled.img`
-  margin: 0 25px;
-`;
-
-const SocialLoginStyle = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
